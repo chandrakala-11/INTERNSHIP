@@ -1,0 +1,124 @@
+# Heart-Disease-Prediction
+
+#  Introduction
+
+Thus preventing Heart diseases has become more than necessary. Good data-driven systems for predicting heart diseases can improve the entire research and prevention process, making sure that more people can live healthy lives. This is where Machine Learning comes into play. Machine Learning helps in predicting the Heart diseases, and the predictions made are quite accurate.
+
+The project involved analysis of the heart disease patient dataset with proper data processing. Then, different models were trained and and predictions are made with different algorithms KNN, Decision Tree, Random Forest,SVM,Logistic Regression etc
+
+I've used a variety of Machine Learning algorithms, implemented in Python, to predict the presence of heart disease in a patient. This is a classification problem, with input features as a variety of parameters, and the target variable as a binary variable, predicting whether heart disease is present or not.
+
+Heart diseases is a term covering any disorder of the heart.
+Heart diseases have become a major concern to deal with as studies show that the number of deaths due to heart diseases have increased significantly over the past few decades in India, in fact it has become the leading cause of death in India.
+
+A study shows that from 1990 to 2016 the death rate due to heart diseases have increased around 34 per cent from 155.7 to 209.1 deaths per one lakh population in India.
+
+Thus preventing Heart diseases has become more than necessary.
+Good data-driven systems for predicting heart diseases can improve the entire research and prevention process, making sure that more people can live healthy lives.
+This is where Machine Learning comes into play.
+Machine Learning helps in predicting the Heart diseases, and the predictions made are quite accurate.
+
+# Problem Description :
+
+A dataset is formed by taking into consideration some of the information of 779 individuals.
+The problem is : based on the given information about each individual we have to calculate that whether that individual will suffer from heart disease.
+
+# Machine Learning algorithms used:
+
+1. Logistic Regression (Scikit-learn)
+2. Naive Bayes (Scikit-learn)
+3. Support Vector Machine (Linear) (Scikit-learn)
+4. K-Nearest Neighbours (Scikit-learn)
+5. Decision Tree (Scikit-learn)
+6. Random Forest (Scikit-learn)
+Accuracy achieved: 95% (Random Forest).
+
+
+## Dataset :
+
+The dataset consists of 779 individuals data.
+There are 15 columns in the dataset, however the first column name is not a good parameter as far as machine learning is considered so, there are effectively 14 columns.
+
+1.	Age : displays the age of the individual.
+2.	Sex : displays the gender of the individual using the following   format : 1 = male
+          0 = female.
+3.	Chest-pain type : displays the type of chest-pain experienced by the individual using the following format :
+           1 = typical angina
+           2 = atypical angina
+           3 = non - anginal pain
+           4 = asymptotic
+4.	Resting Blood Pressure : displays the resting blood pressure value of an individual in mmHg (unit)
+5.	Serum Cholestrol : displays the serum cholestrol in mg/dl (unit)
+6.	Fasting Blood Sugar : compares the fasting blood sugar value of an individual with 120mg/dl. 
+   If fasting blood sugar > 120mg/dl then : 1  (true)
+                                else : 0   (false)
+7.	Resting ECG : 
+              0 = normal
+              1 = having ST-T wave abnormality
+              2 = left ventricular hyperthrophy
+8.	Max heart rate achieved : displays the max heart rate achieved by an individual.
+9.	Exercise induced angina : 
+              1 = yes
+              0 = no
+10.	ST depression induced by exercise relative to rest : displays the value which is integer or float.
+11.	Peak exercise ST segment : 
+              1 = upsloping
+              2 = flat
+              3 = downsloping
+12.	Number of major vessels (0-3) colored by flourosopy : displays the value as integer or float.
+13.	Thal : displays the thalassemia : 
+              3 = normal
+              6 = fixed defect
+              7 = reversable defect
+14.	Diagnosis of heart disease : Displays whether the individual is suffering from heart disease or not : 
+              0 = absence
+              1,2,3,4 = present.
+
+# Splitting:
+
+First, data is divided into two parts using component splitting. In this experiment, data is split based on a ratio of 80:20 for the training set and the prediction set. The training set data is used in the logistic regression component for model training, while the prediction set data is used in the prediction component.
+
+The following classification models are used - Logistic Regression, Random Forest Classfier, SVM, Naive Bayes Classifier, Decision Tree.
+
+# Decision Tree
+
+Decision Trees models which are based on ensembles (eg. Extra Trees and Random Forest) can be used to rank the importance of the different features. Knowing which features our model is giving most importance can be of vital importance to understand how our model is making it’s predictions (therefore making it more explainable).
+
+by applying RandomForestClassifier to the input data and finding the confusion matrix and classification_report,we will able to find the which concepts hold great importance
+
+# KNN
+
+The k-nearest neighbors algorithm uses a very simple approach to perform classification. When tested with a new example, it looks through the training data and finds the k training examples that are closest to the new example. It then assigns the most common class label (among those k-training examples) to the test example.
+
+# Logistic Regression
+
+It is a technique to analyse a data-set which has a dependent variable and one or more independent variables to predict the outcome in a binary variable, meaning it will have only two outcomes.
+
+The dependent variable is categorical in nature. Dependent variable is also referred as target variable and the independent variables are called the predictors.
+
+Logistic regression is a special case of linear regression where we only predict the outcome in a categorical variable. It predicts the probability of the event using the log function.
+
+We use the Sigmoid function/curve to predict the categorical value. The threshold value decides the outcome(win/lose).
+
+Linear regression equation:    y = β0 + β1X1 + β2X2 …. + βnXn
+
+Y stands for the dependent variable that needs to be predicted.
+β0 is the Y-intercept, which is basically the point on the line which touches the y-axis.
+β1 is the slope of the line (the slope can be negative or positive depending on the relationship between the dependent variable and the independent variable.)
+X here represents the independent variable that is used to predict our resultant dependent value.
+
+# SVM
+
+SVM needs to find the optimal line with the constraint of correctly classifying either class:
+Follow the constraint: only look into the separate hyperplanes(e.g. separate lines), hyperplanes that classify classes correctly
+Conduct optimization: pick up the one that maximizes the margin
+
+I will illustrate the concept of separate hyperplane and margin, but the explanation of solving the optimization with the constraint will not be covered in this post.
+
+# Random forest
+
+A random forest is a meta estimator that fits a number of decision tree classifiers on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting. The sub-sample size is controlled with the max_samples parameter if bootstrap=True (default), otherwise the whole dataset is used to build each tree.
+
+# Naive Bayes
+
+Naive Bayes is a kind of classifier which uses the Bayes Theorem. It predicts membership probabilities for each class such as the probability that given record or data point belongs to a particular class. The class with the highest probability is considered as the most likely class.
